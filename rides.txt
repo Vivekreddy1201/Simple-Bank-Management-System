@@ -1,0 +1,3 @@
+1,vivek12,satya11,Airport,Mall,8,Car
+1732036774862,vivek12,satya11,Mall,Airport,15,Car
+1766412619739,vivek123,hello1212,Downtown,Train Station,10,bike
