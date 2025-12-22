@@ -1,40 +1,49 @@
-# 🚖 Ride Sharing System (C++)
+ 🚖 Ride Sharing System (C++)
 
-A **console-based Ride Sharing System** built using **C++**, demonstrating core
-**Object-Oriented Programming (OOPS)** concepts and **file handling**.
-The project simulates basic features of ride-hailing applications like
-user/driver registration, login, ride booking, and ride history management.
+This is a **console-based Ride Sharing System** implemented in **C++** using
+**Object-Oriented Programming (OOPS)** and **file handling**.
+The project simulates a basic ride-sharing workflow where users can book rides
+and drivers can view their ride history and profile information.
+
+This project is developed as an **academic mini-project** to demonstrate
+OOPS concepts, menu-driven programming, and persistent data storage.
 
 ---
 
 ## ✨ Features
 
 ### 👤 User
-- Register and login
-- View profile information
-- Book a ride
-- View personal ride history
+- Register with validation (age, phone number, unique username)
+- Login using username and password
+- View personal profile information
+- Book a ride by selecting:
+  - Pickup location
+  - Drop location
+  - Vehicle type
+- View previous rides booked by the user
 
 ### 🚗 Driver
-- Register and login
-- View profile information
-- View rides assigned to the driver
+- Register with vehicle and location details
+- Login using username and password
+- View driver profile information
+- View previous rides assigned to the driver
 
 ### ⚙️ System
-- Nearest driver allocation based on distance
-- Fare calculation using distance
-- Persistent data storage using files
-- Robust input validation (prevents infinite loops)
+- Menu-driven interface
+- Nearest driver selection based on location distance
+- Fare calculation based on distance
+- Data persistence using text files
+- Input validation for age, phone number, and menu options
 
 ---
 
 ## 🛠️ Technologies Used
 - **Language:** C++
-- **Concepts:**
-  - Object-Oriented Programming (Inheritance, Encapsulation, Abstraction)
+- **Concepts Used:**
+  - Object-Oriented Programming (Inheritance, Encapsulation)
   - File Handling
-  - Menu-driven programming
-  - Input validation
+  - Menu-Driven Programming
+  - Basic Input Validation
 - **Compiler:** GCC / MinGW (C++17 compatible)
 
 ---
@@ -43,82 +52,57 @@ user/driver registration, login, ride booking, and ride history management.
 RideSharingSystem/
 │
 ├── main.cpp # Complete source code
-├── users.txt # Registered users data
-├── drivers.txt # Registered drivers data
-├── rides.txt # Ride history
+├── users.txt # Stores registered users
+├── drivers.txt # Stores registered drivers
+├── rides.txt # Stores ride details
 └── README.md # Project documentation
-
-yaml
-Copy code
 
 ---
 
-## 📄 Data Format
+## 📄 Data Storage Format
 
 ### users.txt
-username,password,name,age,phone
-
-shell
-Copy code
+username,password,name,age,phoneNumber
 
 ### drivers.txt
-username,password,name,age,phone,vehicleNumber,vehicleType,location,distance
-
-shell
-Copy code
+username,password,name,age,phoneNumber,vehicleNumber,vehicleType,location
 
 ### rides.txt
-rideID,userID,driverID,pickup,drop,fare,vehicleType
-
-yaml
-Copy code
+rideID,userID,driverID,pickupLocation,dropLocation,fare,vehicleType
 
 ---
 
 ## ▶️ How to Run
 
-1. Clone the repository:
+1. Compile the program:
 ```bash
-git clone https://github.com/your-username/ride-sharing-system.git
-cd ride-sharing-system
-Compile the program:
-
-bash
-Copy code
 g++ main.cpp -o ride_app
 Run the application:
 
 bash
 Copy code
 ./ride_app
-🧠 OOPS Concepts Used
-Inheritance: Human → User, Driver
+🧠 OOPS Concepts Implemented
+Inheritance
 
-Encapsulation: Data hiding with public interfaces
+Human → User, Driver
 
-Abstraction: Clear separation of system entities
+Encapsulation
 
-Modularity: Separate functions for registration, login, booking, and menus
+Private data members with public getter methods
+
+Abstraction
+
+Separate classes for User, Driver, Vehicle, Ride, and Place
 
 🛡️ Input Validation
-Handles invalid and non-numeric input safely
+Age validation (minimum age requirement)
 
-Prevents infinite loops
+Phone number validation (10 digits)
 
-Ensures valid menu selections and age constraints
+Menu input validation
 
-🔮 Future Enhancements
-Driver availability (online/offline)
-
-Ride acceptance and rejection
-
-Earnings calculation for drivers
-
-Password hashing for security
-
-Database integration (MySQL)
-
-GUI or web-based interface
+Username uniqueness check during registration
 
 🎓 Academic Use
 This project is suitable for:
@@ -127,13 +111,12 @@ C++ OOPS mini-project
 
 Lab/practical examinations
 
-Viva and demonstrations
-
-Resume and placement portfolios
+Viva and project demonstrations
 
 👨‍💻 Author
 Vivek
 B.Tech – Computer Science Engineering
 
-📜 License
-This project is developed for educational purposes only.
+📜 Declaration
+This project is developed purely for educational purposes and demonstrates
+the use of C++ programming concepts.
