@@ -89,8 +89,9 @@ Stored procedures ensure **atomicity and consistency** during financial transact
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/your-username/smartbank.git
-cd smartbank
+git clone https://github.com/your-username/smartbank.git](https://github.com/Vivekreddy1201/Simple-Bank-Management-System.git
+cd Simple-Bank-Management-System
+
 2️⃣ Install Dependencies
 pip install flask pymysql
 
